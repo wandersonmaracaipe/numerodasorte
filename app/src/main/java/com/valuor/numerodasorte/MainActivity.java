@@ -3,6 +3,10 @@ package com.valuor.numerodasorte;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.TextView;
+
+import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -12,5 +16,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    
+    public void sortearNumero(View view) {
+
+        TextView text = findViewById(R.id.textSelectNumber);
+
+        int randNumber = new Random().nextInt(11);
+
+        text.setText("O número sorteado foi: " + randNumber);
+    }
 }
